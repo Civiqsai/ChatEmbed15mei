@@ -99,19 +99,19 @@ export const LeadCaptureBubble = (props: Props) => {
         {props.isLeadSaved || getLocalStorageChatflow(props.chatflowid)?.lead ? (
           <div class="flex flex-col gap-2">
             <span style={{ 'white-space': 'pre-line' }}>
-              {props.leadsConfig?.successMessage || 'Thank you for submitting your contact information.'}
+              {props.leadsConfig?.successMessage || 'Bedankt voor het doorgeven van uw contactgegevens. Wij nemen zo spoedig mogelijk contact met u op.'}
             </span>
           </div>
         ) : (
           <form class="flex flex-col gap-2" onSubmit={handleLeadCaptureSubmit}>
-            <span style={{ 'white-space': 'pre-line' }}>{props.leadsConfig?.title || 'Let us know where we can reach you:'}</span>
+            <span style={{ 'white-space': 'pre-line' }}>{props.leadsConfig?.title || 'Laat ons weten waar we u kunnen bereiken:'}</span>
             <div class="flex flex-col gap-2 w-full">
               {props.leadsConfig?.name && (
                 <div class="w-full flex flex-col items-start justify-start gap-1">
                   <div class={'w-full flex items-center justify-between chatbot-input border border-[#eeeeee]'}>
                     <input
                       class="focus:outline-none bg-transparent px-4 py-4 flex-1 w-full h-full min-h-[56px] max-h-[128px] text-input disabled:opacity-50 disabled:cursor-not-allowed disabled:brightness-100 "
-                      placeholder="Name"
+                      placeholder="Naam"
                       name="name"
                       style={{ width: '100%' }}
                       value={leadName()}
@@ -127,7 +127,7 @@ export const LeadCaptureBubble = (props: Props) => {
                     <input
                       class="focus:outline-none bg-transparent px-4 py-4 flex-1 w-full h-full min-h-[56px] max-h-[128px] text-input disabled:opacity-50 disabled:cursor-not-allowed disabled:brightness-100 "
                       type="email"
-                      placeholder="Email Address"
+                      placeholder="E-mailadres"
                       name="email"
                       style={{ width: '100%' }}
                       value={leadEmail()}
@@ -143,7 +143,7 @@ export const LeadCaptureBubble = (props: Props) => {
                     <input
                       class="focus:outline-none bg-transparent px-4 py-4 flex-1 w-full h-full min-h-[56px] max-h-[128px] text-input disabled:opacity-50 disabled:cursor-not-allowed disabled:brightness-100 "
                       type="number"
-                      placeholder="Phone Number"
+                      placeholder="Telefoonnummer"
                       name="phone"
                       style={{ width: '100%' }}
                       value={leadPhone()}
