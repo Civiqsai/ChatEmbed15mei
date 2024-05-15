@@ -99,7 +99,8 @@ export const LeadCaptureBubble = (props: Props) => {
         {props.isLeadSaved || getLocalStorageChatflow(props.chatflowid)?.lead ? (
           <div class="flex flex-col gap-2">
             <span style={{ 'white-space': 'pre-line' }}>
-              {props.leadsConfig?.successMessage || 'Bedankt voor het doorgeven van uw contactgegevens. Wij nemen zo spoedig mogelijk contact met u op.'}
+              {props.leadsConfig?.successMessage ||
+                'Bedankt voor het doorgeven van uw contactgegevens. Wij nemen zo spoedig mogelijk contact met u op.'}
             </span>
           </div>
         ) : (
